@@ -86,11 +86,11 @@
 
   }
 
-  #london {
-    -skrollr-animation-name: london;
+  #philippines {
+    -skrollr-animation-name: philippines;
   }
 
-  @-skrollr-keyframes london {
+  @-skrollr-keyframes philippines {
 
     #{$start + 200} {
       transform: translate(-250px, 600px);
@@ -102,37 +102,37 @@
 
   }
 
-  #bus1 {
-    -skrollr-animation-name: bus1;
-  }
+  //#bus1 {
+  //  -skrollr-animation-name: bus1;
+  //}
+  //
+  //@-skrollr-keyframes bus1 {
+  //
+  //  #{$start + 300} {
+  //    transform: translate(0px, 0px);
+  //  }
+  //
+  //  #{$start + 1200} {
+  //    transform: translate(-400px, 0px);
+  //  }
+  //
+  //}
 
-  @-skrollr-keyframes bus1 {
-
-    #{$start + 300} {
-      transform: translate(0px, 0px);
-    }
-
-    #{$start + 1200} {
-      transform: translate(-400px, 0px);
-    }
-
-  }
-
-  #bus2 {
-    -skrollr-animation-name: bus2;
-  }
-
-  @-skrollr-keyframes bus2 {
-
-    #{$start + 300} {
-      transform: translate(0px, 0px);
-    }
-
-    #{$start + 1200} {
-      transform: translate(300px, 0px);
-    }
-
-  }
+  //#bus2 {
+  //  -skrollr-animation-name: bus2;
+  //}
+  //
+  //@-skrollr-keyframes bus2 {
+  //
+  //  #{$start + 300} {
+  //    transform: translate(0px, 0px);
+  //  }
+  //
+  //  #{$start + 1200} {
+  //    transform: translate(300px, 0px);
+  //  }
+  //
+  //}
 
   #planebig {
     -skrollr-animation-name: planebig;
