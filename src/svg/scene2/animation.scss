@@ -86,6 +86,22 @@
 
   }
 
+  #flag {
+    -skrollr-animation-name: flag;
+  }
+
+  @-skrollr-keyframes flag {
+
+    #{$start + 200} {
+      transform: translate(-2000px, 1000px);
+    }
+
+    #{$start + 400} {
+      transform: translate(0px, 0px);
+    }
+
+  }
+
   #philippines {
     -skrollr-animation-name: philippines;
   }
