@@ -58,15 +58,21 @@ $scene_06_end: $scene_06_begin + $scene_06_duration;
 
 @-skrollr-keyframes scene2 {
   #{$scene_02_begin - 500} {
+    background-color: rgba(52, 152, 219, 0.99);
     top: 100%;
   }
   #{$scene_02_begin} {
+    background-color: rgba(52, 152, 219, 0.99);
     top: 0%;
+  }
+  #{$scene_02_begin + 300} {
+    background-color: rgba(29, 67, 156, 0.99);
   }
   #{$scene_02_end - 500} {
     top: 0%;
   }
   #{$scene_02_end} {
+    background-color: rgba(29, 67, 156, 0.99);
     top: -100%;
   }
 }

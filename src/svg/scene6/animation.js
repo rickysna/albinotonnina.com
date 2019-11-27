@@ -64,27 +64,11 @@ export default {
 
   initClickEvents (site) {
     document.querySelector('#email').addEventListener('click', () => {
-      window.open('mailto:albinotonnina@gmail.com')
-    })
-
-    document.querySelector('#medium').addEventListener('click', () => {
-      window.open('https://medium.com/@albinotonnina')
+      window.open('mailto:mr.jiangxue@hotmail.com')
     })
 
     document.querySelector('#linkedin').addEventListener('click', () => {
-      window.open('http://www.linkedin.com/in/albinotonnina', '_blank')
-    })
-
-    document.querySelector('#githubsite').addEventListener('click', () => {
-      window.open('http://github.com/albinotonnina/albinotonnina.com', '_blank')
-    })
-
-    document.querySelector('#instagram').addEventListener('click', () => {
-      window.open('http://www.instagram.com/albino_tonnina', '_blank')
-    })
-
-    document.querySelector('#twitter').addEventListener('click', () => {
-      window.open('https://twitter.com/albinotonnina', '_blank')
+      window.open('https://www.linkedin.com/in/ricky-jiang-040860192/', '_blank')
     })
 
     document.querySelector('#contactresume').addEventListener('click', () => {

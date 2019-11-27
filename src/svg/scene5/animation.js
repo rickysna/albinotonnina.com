@@ -19,9 +19,9 @@ export default {
     document.querySelector('[data-scene="scene5"]').innerHTML = sceneHtml
     document.querySelector('[data-scene="scene5"] .svg').innerHTML = sceneSvg
 
-    this.addVideoPlayer(site)
+    // this.addGithubIframe(site)
 
-    this.getPhoneDimensionsInAHackyWayCauseFirefoxDoesNotWork()
+    // this.getPhoneDimensionsInAHackyWayCauseFirefoxDoesNotWork()
   },
 
   getPhoneDimensionsInAHackyWayCauseFirefoxDoesNotWork () {
@@ -39,50 +39,49 @@ export default {
     svg.appendChild(newrect)
   },
 
-  addVideoPlayer (site) {
-    const videoPlayerDiv = utils.createElementWithAttrs('div', {
-      id: 'videoPlayer'
+  addGithubIframe (site) {
+    const githubIframeDiv = utils.createElementWithAttrs('div', {
+      id: 'githubIframe'
     })
 
-    const videoPlayerIframe = utils.createElementWithAttrs('iframe', {
-      id: 'vimeoPlayer',
-      src: '//player.vimeo.com/video/88016428',
+    const githubIframe = utils.createElementWithAttrs('iframe', {
+      id: 'githubWebsite',
+      src: 'http://github.com/rickysna',
       width: '100%',
       height: '100%',
       frameborder: '0',
       allowfullscreen: true
     })
 
-    videoPlayerDiv.appendChild(videoPlayerIframe)
-    site.siteRoot.appendChild(videoPlayerDiv)
+    githubIframeDiv.appendChild(githubIframe)
+    site.siteRoot.appendChild(githubIframeDiv)
   },
 
   render: function (data) {
-    if (data.curTop > 5550 && data.curTop < 5900) {
-      // console.log('resizing');
-
-      const rect = document.querySelector('#dear_firefox_come_on').getBoundingClientRect()
-
-      const videoPlayerIframe = document.querySelector('#videoPlayer')
-      videoPlayerIframe.style.left = `${Math.floor(rect.left)}px`
-      videoPlayerIframe.style.top = `${Math.floor(rect.top)}px`
-      videoPlayerIframe.style.width = `${Math.floor(rect.width)}px`
-      videoPlayerIframe.style.height = `${Math.floor(rect.height)}px`
-    }
+    // if (data.curTop > 5550 && data.curTop < 5900) {
+    //   // console.log('resizing');
+    //   const rect = document.querySelector('#dear_firefox_come_on').getBoundingClientRect()
+    //
+    //   const githubIframe = document.querySelector('#githubWebsite')
+    //   githubIframe.style.left = `${Math.floor(rect.left)}px`
+    //   githubIframe.style.top = `${Math.floor(rect.top)}px`
+    //   githubIframe.style.width = `${Math.floor(rect.width)}px`
+    //   githubIframe.style.height = `${Math.floor(rect.height)}px`
+    // }
 
     if (data.curTop > this.minY && data.curTop < this.maxY) {
       if ((data.curTop - this.iskey > this.keyfreq && data.direction === 'down') || (this.iskey - data.curTop > this.keyfreq && data.direction === 'up')) {
         const keys1 = document.querySelectorAll('#keyboard rect')
-        const keys2 = document.querySelectorAll('#keyboard2 rect')
-        const keys3 = document.querySelectorAll('#keyboard3 rect')
+        // const keys2 = document.querySelectorAll('#keyboard2 rect')
+        // const keys3 = document.querySelectorAll('#keyboard3 rect')
 
         const randomKey1 = Math.floor(Math.random() * keys1.length)
-        const randomKey2 = Math.floor(Math.random() * keys2.length)
-        const randomKey3 = Math.floor(Math.random() * keys3.length)
+        // const randomKey2 = Math.floor(Math.random() * keys2.length)
+        // const randomKey3 = Math.floor(Math.random() * keys3.length)
 
         keys1[randomKey1].style.fill = '#ccd1d9'
-        keys2[randomKey2].style.fill = '#f7f9f8'
-        keys3[randomKey3].style.fill = '#f7f9f8'
+        // keys2[randomKey2].style.fill = '#f7f9f8'
+        // keys3[randomKey3].style.fill = '#f7f9f8'
 
         this.iskey = data.curTop
       }

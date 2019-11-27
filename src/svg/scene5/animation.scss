@@ -3,11 +3,11 @@ $start: $scene_05_begin;
 
 
 
-#videoPlayer {
-    -skrollr-animation-name: a_videoPlayer;
+#githubWebsite {
+    -skrollr-animation-name: a_githubWebsite;
 }
 
-@-skrollr-keyframes a_videoPlayer {
+@-skrollr-keyframes a_githubWebsite {
 
     #{$start + 1350} {
         opacity: 0;
@@ -72,18 +72,18 @@ $start: $scene_05_begin;
         }
     }
 
-    #scene {
-        -skrollr-animation-name: scene4r;
-
-    }
-    @-skrollr-keyframes scene4r {
-        #{$start + 1150} {
-            transform: rotate(0deg) translate(0px, 0px) scale(1);
-        }
-        #{$start + 1350} {
-            transform: rotate(90deg) translate(-6930px, -530px) scale(8);
-        }
-    }
+    //#scene {
+    //    -skrollr-animation-name: scene4r;
+    //
+    //}
+    //@-skrollr-keyframes scene4r {
+    //    #{$start + 1150} {
+    //        transform: rotate(0deg) translate(0px, 0px) scale(1);
+    //    }
+    //    #{$start + 1350} {
+    //        transform: rotate(90deg) translate(-6930px, -530px) scale(8);
+    //    }
+    //}
 
     #fg {
         -skrollr-animation-name: fgg;
@@ -108,241 +108,257 @@ $start: $scene_05_begin;
 
 
 
-    #titles {
-        #title1 {
-            -skrollr-animation-name: title1;
-        }
-        #title2 {
-            -skrollr-animation-name: title2;
-        }
-        #title3 {
-            -skrollr-animation-name: title3;
-        }
+    #title {
+        -skrollr-animation-name: title;
     }
-    @-skrollr-keyframes title1 {
+    #subTitle1 {
+        -skrollr-animation-name: title1;
+    }
+    #subTitle2 {
+        -skrollr-animation-name: title2;
+    }
+    @-skrollr-keyframes title {
         #{$start} {
             opacity: 0;
         }
         #{$start + 100} {
             opacity: 1;
         }
-        #{$start + 300} {
+    }
+
+    #skills {
+        #fed {
+            -skrollr-animation-name: fed;
+        }
+        #bed {
+            -skrollr-animation-name: bed;
+        }
+    }
+
+    $skills_interval: 80;
+    $skills_start: $start + 200;
+
+    @-skrollr-keyframes title1 {
+        #{$start + 50} {
+            opacity: 0;
+        }
+        #{$start + 150} {
             opacity: 1;
         }
-        #{$start + 350} {
+        #{$skills_start + $skills_interval * 11} {
+            opacity: 1;
+        }
+        #{$skills_start + $skills_interval * 12} {
             opacity: 0;
         }
     }
 
     @-skrollr-keyframes title2 {
-        #{$start} {
+        #{$skills_start + $skills_interval * 11} {
             opacity: 0;
         }
-        #{$start + 400} {
-            opacity: 0;
-        }
-        #{$start + 450} {
-            opacity: 1;
-        }
-        #{$start + 900} {
-            opacity: 1;
-        }
-        #{$start + 950} {
-            opacity: 0;
-        }
-    }
-
-    @-skrollr-keyframes title3 {
-        #{$start + 940} {
-            opacity: 0;
-        }
-        #{$start + 980} {
+        #{$skills_start + $skills_interval * 12} {
             opacity: 1;
         }
     }
 
-    #desks {
-        -skrollr-animation-name: desks;
-        #employee {
-            -skrollr-animation-name: employee;
+    @-skrollr-keyframes fed {
+        #{$skills_start} {
+            transform: translateX(0px);
+            opacity: 1;
         }
-        #entrepeneur {
-            -skrollr-animation-name: entrepeneur;
+        #{$skills_start + $skills_interval * 10} {
+            transform: translateX(0px);
+            opacity: 1;
         }
-        #freelance {
-            -skrollr-animation-name: freelance;
-        }
-    }
-    @-skrollr-keyframes desks {
-        #{$start + 400} {
-            transform: translate(0px, 0px) scale(1);
-        }
-        #{$start + 450} {
-            transform: translate(300px, 0px) scale(0.6);
-        }
-        #{$start + 900} {
-            transform: translate(300px, 0px) scale(0.6);
-        }
-        #{$start + 950} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 11} {
+            transform: translateX(-300px);
+            opacity: 0;
         }
     }
 
-    #clients {
-        #luiss {
-            -skrollr-animation-name: luiss;
-        }
-        #algida {
-            -skrollr-animation-name: algida;
-        }
-        #unilever {
-            -skrollr-animation-name: unilever;
-        }
-        #alitalia {
-            -skrollr-animation-name: alitalia;
-        }
-        #enel {
-            -skrollr-animation-name: enel;
-        }
-        #equitalia {
-            -skrollr-animation-name: equitalia;
-        }
-        #infostrada {
-            -skrollr-animation-name: infostrada;
-        }
-        #nintendo {
-            -skrollr-animation-name: nintendo;
-        }
-        #peroni {
-            -skrollr-animation-name: peroni;
-        }
-        #sapienza {
-            -skrollr-animation-name: sapienza;
-        }
-        #wind {
-            -skrollr-animation-name: wind;
-        }
-    }
-    @-skrollr-keyframes unilever {
-        #{$start + 100} {
-            transform: translate(-3000px, -8000px) scale(16);
+    @-skrollr-keyframes bed {
+        #{$skills_start} {
             opacity: 0;
         }
-        #{$start + 150} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 11} {
+            opacity: 0;
+        }
+        #{$skills_start + $skills_interval * 12} {
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes luiss {
-        #{$start + 140} {
-            transform: translate(0px, 1000px);
+    #fed {
+        #HTML {
+            -skrollr-animation-name: HTML;
+        }
+        #CSS {
+            -skrollr-animation-name: CSS;
+        }
+        #Javascript {
+            -skrollr-animation-name: Javascript;
+        }
+        #React {
+            -skrollr-animation-name: React;
+        }
+        #Vue {
+            -skrollr-animation-name: Vue;
+        }
+        #React_Native {
+            -skrollr-animation-name: ReactNative;
+        }
+        #Angular {
+            -skrollr-animation-name: Angular;
+        }
+    }
+
+    #bed {
+        #PHP {
+            -skrollr-animation-name: PHP;
+        }
+        #Mysql {
+            -skrollr-animation-name: Mysql;
+        }
+        #Linux {
+            -skrollr-animation-name: Linux;
+        }
+        #Laravel {
+            -skrollr-animation-name: Laravel;
+        }
+    }
+
+    @-skrollr-keyframes HTML {
+        #{$skills_start + $skills_interval} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 210} {
-            transform: translate(0px, 0px);
+        #{$skills_start + $skills_interval * 2} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes algida {
-        #{$start + 260} {
-            transform: translate(-3000px, -8000px) scale(16);
+    @-skrollr-keyframes CSS {
+        #{$skills_start + $skills_interval * 2} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 310} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 3} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes alitalia {
-        #{$start + 350} {
-            transform: translate(-3000px, -8000px) scale(16);
+    @-skrollr-keyframes Javascript {
+        #{$skills_start + $skills_interval * 3} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 400} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 4} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes enel {
-        #{$start + 450} {
-            transform: translate(-2600px, -8000px) scale(16);
+    @-skrollr-keyframes React {
+        #{$skills_start + $skills_interval * 4} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 500} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 5} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes equitalia {
-        #{$start + 560} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes Vue {
+        #{$skills_start + $skills_interval * 5} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 610} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 6} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes infostrada {
-        #{$start + 700} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes ReactNative {
+        #{$skills_start + $skills_interval * 6} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 750} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 7} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes nintendo {
-        #{$start + 770} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes Angular {
+        #{$skills_start + $skills_interval * 7} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 820} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 8} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes peroni {
-        #{$start + 850} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes PHP {
+        #{$skills_start + $skills_interval * 12} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 900} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 13} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes sapienza {
-        #{$start + 950} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes Mysql {
+        #{$skills_start + $skills_interval * 13} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 1000} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 14} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
 
-    @-skrollr-keyframes wind {
-        #{$start + 1050} {
-            transform: translate(-4700px, -8000px) scale(16);
+    @-skrollr-keyframes Linux {
+        #{$skills_start + $skills_interval * 14} {
+            transform: translateX(-200px);
             opacity: 0;
         }
-        #{$start + 1100} {
-            transform: translate(0px, 0px) scale(1);
+        #{$skills_start + $skills_interval * 15} {
+            transform: translateX(0);
             opacity: 1;
         }
     }
+
+    @-skrollr-keyframes Laravel {
+        #{$skills_start + $skills_interval * 15} {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+        #{$skills_start + $skills_interval * 16} {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    //@-skrollr-keyframes bed {
+    //    #{$start + 750} {
+    //        transform: translateX(-200px);
+    //        opacity: 0;
+    //    }
+    //    #{$start + 850} {
+    //        transform: translateX(0);
+    //        opacity: 1;
+    //    }
+    //}
 
     #mouse04 {
         -skrollr-animation-name: mouse04;
@@ -399,202 +415,6 @@ $start: $scene_05_begin;
         }
         #{$mousestart + 1450} {
             transform: rotate(-1deg);
-        }
-    }
-
-
-
-   #mouse04-1 {
-        -skrollr-animation-name: mouse04-1;
-    }
-
-    @-skrollr-keyframes mouse04-1 {
-        #{$mousestart} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 50} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 100} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 150} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 200} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 250} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 300} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 350} {
-            transform: rotate(-2deg);
-        }
-        #{$mousestart + 500} {
-            transform: rotate(-2deg);
-        }
-        #{$mousestart + 550} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 750} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 800} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 850} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 950} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 1050} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 1250} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 1450} {
-            transform: rotate(-1deg);
-        }
-    }
-
-   #mouse04-2 {
-        -skrollr-animation-name: mouse04-2;
-    }
-
-    @-skrollr-keyframes mouse04-2 {
-        #{$mousestart} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 50} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 100} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 150} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 200} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 250} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 300} {
-            transform: rotate(-1deg);
-        }
-        #{$mousestart + 350} {
-            transform: rotate(-2deg);
-        }
-        #{$mousestart + 500} {
-            transform: rotate(-2deg);
-        }
-        #{$mousestart + 550} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 750} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 800} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 850} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 950} {
-            transform: rotate(0deg);
-        }
-        #{$mousestart + 1050} {
-            transform: rotate(1deg);
-        }
-        #{$mousestart + 1250} {
-            transform: rotate(2deg);
-        }
-        #{$mousestart + 1450} {
-            transform: rotate(-1deg);
-        }
-    }
-
-
-    @-skrollr-keyframes employee {
-        #{$start + 400} {
-            opacity: 0;
-        }
-        #{$start + 450} {
-            opacity: 1;
-        }
-        #{$start + 900} {
-            opacity: 1;
-        }
-        #{$start + 950} {
-            opacity: 0;
-        }
-    }
-
-    @-skrollr-keyframes entrepeneur {
-        #{$start + 900} {
-            opacity: 0;
-        }
-        #{$start + 950} {
-            opacity: 1;
-        }
-    }
-
-    @-skrollr-keyframes freelance {
-        #{$start + 400} {
-            opacity: 1;
-        }
-        #{$start + 450} {
-            opacity: 0;
-        }
-    }
-
-    #deskleft {
-        -skrollr-animation-name: deskleft;
-    }
-    @-skrollr-keyframes deskleft {
-        #{$start + 400} {
-            opacity: 0;
-            transform: translate(-500px, 0px);
-        }
-        #{$start + 450} {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
-        #{$start + 900} {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
-        #{$start + 950} {
-            opacity: 0;
-            transform: translate(-500px, 0px);
-        }
-    }
-
-    #deskright {
-        -skrollr-animation-name: deskright;
-    }
-    @-skrollr-keyframes deskright {
-        #{$start + 400} {
-            opacity: 0;
-            transform: translate(500px, 0px);
-        }
-        #{$start + 450} {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
-        #{$start + 900} {
-            opacity: 1;
-            transform: translate(0px, 0px);
-        }
-        #{$start + 950} {
-            opacity: 0;
-            transform: translate(500px, 0px);
         }
     }
 }

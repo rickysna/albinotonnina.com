@@ -1,11 +1,18 @@
 #scene2 {
+  $start: $scene_02_begin;
+
+  #philippines {
+    position: absolute;
+    left: -5%;
+    bottom: 60px;
+    width: 110%;
+  }
 
   .svg{
     width: 100%;
     height: 100%;
+    position: relative;
   }
-
-  $start: $scene_02_begin;
 
   #wire2 {
     stroke-width: 2;
@@ -116,6 +123,41 @@
       transform: translate(0px, 0px);
     }
 
+  }
+
+  #jeepney1, #jeepney2 {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+  }
+
+  #jeepney1 {
+    -skrollr-animation-name: jeepney1;
+  }
+
+  @-skrollr-keyframes jeepney1 {
+    #{$start + 300} {
+      transform: translate(0px, 0px);
+    }
+
+    #{$start + 1200} {
+      transform: translate(400px, 0px);
+    }
+  }
+
+  #jeepney2 {
+    -skrollr-animation-name: jeepney2;
+  }
+
+  @-skrollr-keyframes jeepney2 {
+    #{$start + 300} {
+      transform: translate(300px, 0px);
+    }
+
+    #{$start + 1200} {
+      transform: translate(0px, 0px);
+    }
   }
 
   //#bus1 {
